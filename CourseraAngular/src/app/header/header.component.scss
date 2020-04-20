@@ -1,0 +1,58 @@
+$lt-gray: #ddd;
+$background-dark: #512DA8;
+$background-light: #9575CD;
+$background-pale: #D1C4E9;
+
+@mixin zero-margin($pad-up-down, $pad-left-right) {
+  margin: 0px auto;
+  padding: $pad-up-down $pad-left-right;
+}
+
+@mixin onHover {
+    transition: opacity 0.5s linear;
+    animation-name: example;
+    animation-duration: 5s;
+    
+    animation-iteration-count: infinite;
+}
+.jumbotron {
+
+  @include zero-margin(70px, 30px);
+  background: $background-light;
+  color: floralwhite;
+  min-height: 150px;
+}
+
+#jumbo {
+  //     display: none !important;
+  //   opacity: 0;
+  //   transition: visibility 0s, opacity 0.5s linear;
+  position: absolute;
+  opacity: 0;
+
+}
+
+#toolbar:hover+#jumbo{
+  //   display: block !important;
+  //   visibility: visible;
+  //   opacity: 1;
+  position: static;
+  opacity: 1;
+  @include onHover();
+}
+
+#jumbo:hover{
+    position: static;
+    opacity: 1;
+    @include onHover();
+}
+
+
+
+
+@keyframes example {
+    0%   {background-color: #673ab7;}
+    25%  {background-color: rgb(255, 166, 0);}
+    50%  {background-color: rgb(255, 72, 0);}
+    100% {background-color: #673ab7;}
+  }
