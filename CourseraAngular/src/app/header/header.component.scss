@@ -2,6 +2,7 @@ $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
+$background-moredark: #4527A0;
 
 @mixin zero-margin($pad-up-down, $pad-left-right) {
   margin: 0px auto;
@@ -9,12 +10,13 @@ $background-pale: #D1C4E9;
 }
 
 @mixin onHover {
-    transition: opacity 0.5s linear;
-    animation-name: example;
-    animation-duration: 5s;
-    
-    animation-iteration-count: infinite;
+  transition: opacity 0.5s linear;
+  animation-name: example;
+  animation-duration: 5s;
+
+  animation-iteration-count: infinite;
 }
+
 .jumbotron {
 
   @include zero-margin(70px, 30px);
@@ -32,7 +34,7 @@ $background-pale: #D1C4E9;
 
 }
 
-#toolbar:hover+#jumbo{
+#toolbar:hover+#jumbo {
   //   display: block !important;
   //   visibility: visible;
   //   opacity: 1;
@@ -41,18 +43,33 @@ $background-pale: #D1C4E9;
   @include onHover();
 }
 
-#jumbo:hover{
-    position: static;
-    opacity: 1;
-    @include onHover();
+#jumbo:hover {
+  position: static;
+  opacity: 1;
+  @include onHover();
 }
 
 
 
 
 @keyframes example {
-    0%   {background-color: #673ab7;}
-    25%  {background-color: rgb(255, 166, 0);}
-    50%  {background-color: rgb(255, 72, 0);}
-    100% {background-color: #673ab7;}
+  0% {
+    background-color: #673ab7;
   }
+
+  25% {
+    background-color: rgb(255, 166, 0);
+  }
+
+  50% {
+    background-color: rgb(255, 72, 0);
+  }
+
+  100% {
+    background-color: #673ab7;
+  }
+}
+
+.active {
+  background: #FFAB40;
+}
