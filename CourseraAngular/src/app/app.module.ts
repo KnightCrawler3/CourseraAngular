@@ -8,10 +8,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { AppRoutingModule } from './app-routing/app-routing.module'
-import { MatDialogModule, MatCheckboxModule } from '@angular/material'
-import { MatFormFieldModule } from '@angular/material'
-import { MatInputModule, MatSelectModule , MatSlideToggleModule} from '@angular/material'
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { MatDialogModule, MatCheckboxModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material';
+import { MatInputModule, MatSelectModule , MatSlideToggleModule} from '@angular/material';
+
 import 'hammerjs';
 
 import { DishService } from './services/dish.service';
@@ -55,7 +56,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,MatCheckboxModule,ReactiveFormsModule,
-    MatSelectModule,MatSlideToggleModule
+    MatSelectModule,MatSlideToggleModule,MatProgressSpinnerModule
   ],
   providers: [DishService, PromotionService, LeaderService],
   entryComponents: [
