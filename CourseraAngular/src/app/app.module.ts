@@ -9,7 +9,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { MatDialogModule, MatCheckboxModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatDialogModule, MatCheckboxModule, MatProgressSpinnerModule, MatSliderModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material';
 import { MatInputModule, MatSelectModule , MatSlideToggleModule} from '@angular/material';
 
@@ -57,6 +57,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,MatCheckboxModule,ReactiveFormsModule,
     MatSelectModule,MatSlideToggleModule,MatProgressSpinnerModule
+    ,MatSliderModule
   ],
   providers: [DishService, PromotionService, LeaderService],
   entryComponents: [
